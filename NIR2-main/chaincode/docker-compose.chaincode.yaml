@@ -11,8 +11,8 @@ services:
       - "9999:9999"
     environment:
       - CHAINCODE_SERVER_ADDRESS=0.0.0.0:9999
-      - CHAINCODE_ID=taskdocument_1.0:1d969c2aa8f4de5766f6622e62452ebd42ed8b9111241ca62e0ca6aef1d6e18d
-      - CORE_CHAINCODE_ID_NAME=taskdocument_1.0:1d969c2aa8f4de5766f6622e62452ebd42ed8b9111241ca62e0ca6aef1d6e18d
+      - CHAINCODE_ID=taskdocument_1.0:4f7015314b669a867c720d1f72f830cc9679fc592678bb506c00b9c6ff33aa7b
+      - CORE_CHAINCODE_ID_NAME=taskdocument_1.0:4f7015314b669a867c720d1f72f830cc9679fc592678bb506c00b9c6ff33aa7b
       - CORE_PEER_ADDRESS=0.0.0.0:9999
       - CORE_PEER_TLS_ENABLED=false
     networks:

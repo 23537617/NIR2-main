@@ -28,7 +28,7 @@ class ChaincodeDeployer:
         self.channel_name = "npa-channel"
         self.chaincode_name = "taskdocument"
         self.chaincode_version = "1.0"
-        self.chaincode_sequence = "1"
+        self.chaincode_sequence = "1" # Incremented to sync peer configurations
         self.chaincode_label = f"{self.chaincode_name}_{self.chaincode_version}"
         self.chaincode_package = self.chaincode_dir / f"{self.chaincode_name}.tar.gz"
         
