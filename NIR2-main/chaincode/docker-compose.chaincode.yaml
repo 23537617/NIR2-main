@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  chaincode-server:
+    build:
+      context: ./chaincode-ts
+      dockerfile: Dockerfile
+    container_name: chaincode-server
+    image: chaincode-ts:latest
+    ports:
+      - "9999:9999"
+    environment:
+      - CHAINCODE_SERVER_ADDRESS=0.0.0.0:9999
+      - CHAINCODE_ID=taskdocument_1.0:1d969c2aa8f4de5766f6622e62452ebd42ed8b9111241ca62e0ca6aef1d6e18d
+      - CORE_CHAINCODE_ID_NAME=taskdocument_1.0:1d969c2aa8f4de5766f6622e62452ebd42ed8b9111241ca62e0ca6aef1d6e18d
+      - CORE_PEER_ADDRESS=0.0.0.0:9999
+      - CORE_PEER_TLS_ENABLED=false
+    networks:
+      - fabric-network
+    restart: unless-stopped
+
+networks:
+  fabric-network:
+    external: true
+    name: nir2-main_fabric-network
